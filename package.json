@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "build": "NODE_ENV=production yarn build:webpack && yarn build:lib",
     "build": "webpack --config webpack.prod.js --mode production",
     "preview": "npm run build && http-server dist",
     "test": "standard"
